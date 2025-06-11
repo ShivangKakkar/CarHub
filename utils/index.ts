@@ -6,7 +6,7 @@ export async function fetchCars(filters: FilterProps) {
     'X-Api-Key': process.env.NEXT_PUBLIC_CAR_API_KEY || '',
   }
   console.log(year)
-  const url = `https://api.api-ninjas.com/v1/cars?make=${manufacturer}&model=${model}&year=${year}&limit=${limit}&fuel_type=${fuel}`
+  const url = `https://api.api-ninjas.com/v1/cars?make=${manufacturer}&model=${model}&year=${year}&&fuel_type=${fuel}`
   console.log(url)
   const response = await fetch(url, { headers: headers })
   const result = await response.json()
